@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+<!-- Make Passive Coolers refuelable with wood -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+  		<li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="PassiveCooler"]/comps</xpath>
+  			<value>
+          <li Class="CompProperties_Refuelable">
+      			<fuelConsumptionRate>1.0</fuelConsumptionRate>
+      			<fuelCapacity>15.0</fuelCapacity>
+      			<fuelFilter>
+      				<thingDefs>
+      					<li>WoodLog</li>
+      				</thingDefs>
+      			</fuelFilter>
+            <destroyOnNoFuel>false</destroyOnNoFuel>
+      		</li>
+          <li>
+            <compClass>CompGatherSpot</compClass>
+          </li>
+  			</value>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName="PassiveCooler"]/comps/li[contains(@Class,'CompProperties_Lifespan')]</xpath>
+      </li>
+		</operations>
+	</Operation>
+
+  <!-- Make Passive Coolers refuelable with Vegetable Garden bamboo -->
+  	<Operation Class="PatchOperationSequence">
+			<success>Always</success>
+  		<operations>
+        <li Class="ModCheck.isModLoaded">
+          <modName>VGP Vegetable Garden</modName>
+          <yourMod>Passive Coolers Refuelable</yourMod>
+          <errorOnFail>false</errorOnFail>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="PassiveCooler"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs</xpath>
+    			<value>
+            <li>Bamboo</li>
+    			</value>
+        </li>
+  		</operations>
+  	</Operation>
+
+<!--	<Operation Class="PatchOperationSequence">
+				<success>Always</success>
+    		<operations>
+          <li Class="ModCheck.isModLoaded">
+            <modName>Extended Woodworking</modName>
+            <yourMod>Passive Coolers Refuelable</yourMod>
+            <errorOnFail>false</errorOnFail>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="PassiveCooler"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs</xpath>
+      			<value>
+              <li>WoodLog_Birch</li>
+              <li>WoodLog_Oak</li>
+              <li>WoodLog_Cecropia</li>
+              <li>WoodLog_Cypress</li>
+              <li>WoodLog_Drago</li>
+              <li>WoodLog_Maple</li>
+              <li>WoodLog_Palm</li>
+              <li>WoodLog_Poplar</li>
+              <li>WoodLog_Pine</li>
+              <li>WoodLog_Teak</li>
+              <li>WoodLog_Willow</li>
+      			</value>
+          </li>
+    		</operations>
+    	</Operation> -->
+
+</Patch>
