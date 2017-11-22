@@ -41,6 +41,7 @@
           <xpath>Defs/ThingDef[defName="PassiveCooler"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs</xpath>
     			<value>
             <li>Bamboo</li>
+						<li>VG_IronWoodLog</li>
     			</value>
         </li>
   		</operations>
