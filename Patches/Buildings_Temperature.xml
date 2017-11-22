@@ -8,8 +8,8 @@
         <xpath>Defs/ThingDef[defName="PassiveCooler"]/comps</xpath>
   			<value>
           <li Class="CompProperties_Refuelable">
-      			<fuelConsumptionRate>1.0</fuelConsumptionRate>
-      			<fuelCapacity>15.0</fuelCapacity>
+      			<fuelConsumptionRate>10.0</fuelConsumptionRate>
+      			<fuelCapacity>50.0</fuelCapacity>
       			<fuelFilter>
       				<thingDefs>
       					<li>WoodLog</li>

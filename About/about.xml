@@ -3,6 +3,7 @@
 	<name>Passive Coolers Refuelable</name>
 	<author>Sixdd</author>
 	<targetVersion>0.18.1722</targetVersion>
-	<description>This mod allows you to refuel passive coolers with wood saving you the tedious task of rebuilding them every few days. A patch is included for vegetable garden bamboo, also works with Extended Woodworking.\n\nThe "fuel" it stores is less than the cost in wood to build so I figure if you have to refuel them more often it offsets the benefit of less micromanagement.
+	<description>This mod allows you to refuel passive coolers with wood saving you the tedious task of rebuilding them every few days. A patch is included for vegetable garden bamboo, also works with Extended Woodworking.\n\nThe "fuel" it stores is equal to the cost in wood to build and lasts the same length so I figure it's balanced enough just with a bit less micromanagement.
 
+	</description>
 </ModMetaData>
