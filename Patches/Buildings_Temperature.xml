@@ -15,7 +15,7 @@
       					<li>WoodLog</li>
       				</thingDefs>
       			</fuelFilter>
-            <destroyOnNoFuel>false</destroyOnNoFuel>
+            <destroyOnNoFuel>true</destroyOnNoFuel>
       		</li>
           <li>
             <compClass>CompGatherSpot</compClass>
@@ -28,7 +28,7 @@
 		</operations>
 	</Operation>
 
-  <!-- Make Passive Coolers refuelable with Vegetable Garden bamboo -->
+  <!-- Make Passive Coolers refuelable with Vegetable Garden bamboo and ironwood -->
   	<Operation Class="PatchOperationSequence">
 			<success>Always</success>
   		<operations>
@@ -47,7 +47,8 @@
   		</operations>
   	</Operation>
 
-<!--	<Operation Class="PatchOperationSequence">
+	<!-- Make Passive Coolers refuelable with Extended Woodworking woods -->
+	<Operation Class="PatchOperationSequence">
 				<success>Always</success>
     		<operations>
           <li Class="ModCheck.isModLoaded">
@@ -72,6 +73,6 @@
       			</value>
           </li>
     		</operations>
-    	</Operation> -->
+    	</Operation>
 
 </Patch>
